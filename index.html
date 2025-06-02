@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FarmaGuia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>FarmaGuia</h1>
+    <nav id="navbar">
+      <a href="#inicio">Início</a>
+      <a href="#funciona">Como Funciona</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#equipe">Equipe</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Bem-vindo ao FarmaGuia</h2>
+      <p>Nosso objetivo é auxiliar idosos na adesão correta ao tratamento medicamentoso. Este site demonstra as funcionalidades que poderão ser implementadas em um futuro aplicativo real.</p>
+    </section>
+
+    <section id="funciona">
+      <h2>Como Funciona?</h2>
+      <ul>
+        <li>Lembretes para horário dos medicamentos</li>
+        <li>Simulação de anexar receitas</li>
+        <li>Informações sobre interações medicamentosas</li>
+        <li>Comunicação com farmacêuticos</li>
+      </ul>
+    </section>
+
+    <section id="simulador" class="simulador">
+      <h2>Simulador</h2>
+      <form onsubmit="salvarDados(event)">
+        <label for="medicamento">Nome do Medicamento:</label>
+        <input type="text" id="medicamento" required />
+
+        <label for="horario">Horário de uso:</label>
+        <input type="time" id="horario" required />
+
+        <label for="receita">Anexar Receita (simulado):</label>
+        <input type="file" id="receita" accept="image/*,application/pdf" onchange="previewImagem()" />
+        <img id="preview" style="max-width: 100%; margin-top: 10px; display: none;"/>
+
+        <label for="duvidas">Dúvidas Frequentes:</label>
+        <textarea id="duvidas" rows="4"></textarea>
+
+        <button type="submit">Salvar Dados</button>
+        <button type="button" onclick="limparDados()">Limpar Dados</button>
+      </form>
+
+      <div id="dadosSalvos"></div>
+    </section>
+
+    <section id="equipe">
+      <h2>Equipe</h2>
+      <p>Andressa Daynny Azevedo Souza, Emanueli da Silva de Araújo, Hellen Beatriz Monteiro Costa, Isabela Mascarenhas Mendes, Maria Vitoria Pereira Melo, Pattrick Ferreira de Jesus, Sannyel Costa Silva.</p>
+      <p>Orientador: Prof. Saulo José Figueiredo Mendes</p>
+    </section>
+  </main>
+
+  <footer>
+    Projeto acadêmico | Ceuma - Centro Universitário do Maranhão
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

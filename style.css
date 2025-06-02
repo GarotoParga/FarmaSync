@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f8ff;
+  color: #333;
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.simulador form {
+  max-width: 500px;
+}
+
+.simulador input,
+.simulador button,
+.simulador textarea {
+  display: block;
+  margin: 1rem 0;
+  padding: 0.6rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.simulador button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.simulador button:hover {
+  background-color: #005fa3;
+}
+
+footer {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+#dadosSalvos {
+  background: #e0f3ff;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #0077cc;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
