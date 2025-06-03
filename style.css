@@ -1,15 +1,20 @@
+/* Reset básico e box-sizing */
 * {
   box-sizing: border-box;
 }
 
+/* Fonte principal */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f2f8ff;
   color: #333;
+  line-height: 1.6;
+  font-size: 18px; /* Fonte maior para acessibilidade */
 }
 
+/* Cabeçalho fixo e estilizado */
 header {
   background-color: #0077cc;
   color: white;
@@ -24,18 +29,28 @@ header {
 }
 
 header h1 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  margin: 0;
 }
 
 nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 .menu-toggle {
@@ -43,31 +58,69 @@ nav a {
   background: none;
   border: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
+/* Main */
 main {
-  padding: 2rem;
+  padding: 2rem 2rem 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+/* Seções */
 section {
   margin-bottom: 3rem;
 }
 
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Imagens ilustrativas */
+.imagem-ilustrativa {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Listas */
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Simulador */
 .simulador form {
-  max-width: 500px;
+  max-width: 100%;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .simulador input,
 .simulador button,
 .simulador textarea {
   display: block;
-  margin: 1rem 0;
-  padding: 0.6rem;
+  margin: 0.8rem 0 1.2rem 0;
+  padding: 0.8rem;
   width: 100%;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.simulador input:focus,
+.simulador textarea:focus {
+  border-color: #0077cc;
+  outline: none;
 }
 
 .simulador button {
@@ -75,26 +128,70 @@ section {
   color: white;
   border: none;
   cursor: pointer;
-  transition: background 0.3s;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
 }
 
-.simulador button:hover {
+.simulador button:hover,
+.simulador button:focus {
   background-color: #005fa3;
+  outline: none;
 }
 
+.botoes-form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.botoes-form button {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* Mensagem de feedback */
+.form-message {
+  color: #006400;
+  font-weight: 600;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+/* Pequeninos detalhes para ajuda */
+.form-help {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: -0.8rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+/* Dúvidas frequentes (FAQ) */
+dl dt {
+  font-weight: 700;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+dl dd {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
 footer {
   background-color: #0077cc;
   color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: 4rem;
-}
-
-#dadosSalvos {
-  background: #e0f3ff;
-  padding: 1rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
   margin-top: 2rem;
-  border-radius: 5px;
+  user-select: none;
 }
 
 /* Responsividade */
@@ -102,20 +199,21 @@ footer {
   nav {
     display: none;
     flex-direction: column;
-    background-color: #0077cc;
     width: 100%;
+    background-color: #0077cc;
     padding: 1rem 0;
   }
 
   nav a {
-    padding: 0.5rem 1rem;
-  }
-
-  .menu-toggle {
-    display: block;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   nav.show {
     display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 }
