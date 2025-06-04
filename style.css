@@ -16,7 +16,7 @@ body {
 
 /* Cabeçalho fixo e estilizado */
 header {
-  background-color: #0077cc;
+  background-color: #70e0a3;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -119,12 +119,12 @@ ul {
 
 .simulador input:focus,
 .simulador textarea:focus {
-  border-color: #0077cc;
+  border-color: #70e0a3;
   outline: none;
 }
 
 .simulador button {
-  background-color: #0077cc;
+  background-color: #70e0a3;
   color: white;
   border: none;
   cursor: pointer;
@@ -182,7 +182,7 @@ dl dd {
 
 /* Footer */
 footer {
-  background-color: #0077cc;
+  background-color: #70e0a3;
   color: white;
   text-align: center;
   padding: 1rem 1rem;
@@ -200,7 +200,7 @@ footer {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #0077cc;
+    background-color: #70e0a3;
     padding: 1rem 0;
   }
 
