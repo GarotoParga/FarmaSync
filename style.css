@@ -1,5 +1,5 @@
 /* Reset básico e box-sizing */
-* {
+*{
   box-sizing: border-box;
 }
 
@@ -28,9 +28,8 @@ header {
   flex-wrap: wrap;
 }
 
-header h1 {
-  font-size: 1.8rem;
-  margin: 0;
+header #logo{
+  border-radius: 70px;
 }
 
 nav {
@@ -203,7 +202,7 @@ footer {
     background-color: #70e0a3;
     padding: 1rem 0;
   }
-
+  
   nav a {
     padding: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
