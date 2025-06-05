@@ -197,7 +197,7 @@ footer {
 @media (max-width: 768px) {
   header #logo{
     border-radius: 70px;
-    height: 60px;
+    height: 50px;
   }
   nav {
     display: none;
