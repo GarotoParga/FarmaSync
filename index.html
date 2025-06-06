@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FarmaSync - Auxílio ao Tratamento Medicamentoso</title>
-  
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  
+
   <!-- Favicon -->
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2850/2850627.png" type="image/png" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header>
     <img id="logo" height="80px" src="imgs/6ad6066f-c0ac-4d68-a84c-e4b6027434dc.jfif" alt="logo-FarmaSync">
@@ -24,18 +26,16 @@
       <a href="#faq">Dúvidas Frequentes</a>
       <a href="#equipe">Equipe</a>
     </nav>
-    <button class="menu-toggle" aria-controls="navbar" aria-expanded="false" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+    <button class="menu-toggle" aria-controls="navbar" aria-expanded="false" aria-label="Abrir menu"
+      onclick="toggleMenu()">☰</button>
   </header>
 
   <main>
     <section id="inicio" tabindex="0" aria-label="Seção de boas-vindas">
       <h2>Bem-vindo ao FarmaSync</h2>
-      <p>Nosso objetivo é auxiliar idosos na adesão correta ao tratamento medicamentoso. Este site demonstra as funcionalidades que poderão ser implementadas em um futuro aplicativo real.</p>
-      <img 
-        src="imgs/pexels-tima-miroshnichenko-7033798.jpg" 
-        alt="Remdédios" 
-        class="imagem-ilustrativa"
-      />
+      <p>Nosso objetivo é auxiliar idosos na adesão correta ao tratamento medicamentoso. Este site demonstra as
+        funcionalidades que poderão ser implementadas em um futuro aplicativo real.</p>
+      <img src="imgs/pexels-tima-miroshnichenko-7033798.jpg" alt="Remdédios" class="imagem-ilustrativa" />
     </section>
 
     <section id="funciona" tabindex="0" aria-label="Como funciona o FarmaGuia">
@@ -46,18 +46,16 @@
         <li>Informações sobre interações medicamentosas</li>
         <li>Comunicação com farmacêuticos</li>
       </ul>
-      <img
-        src="imgs/pexels-martabranco-32236830.jpg" 
-        alt="Farmacêutico auxiliando cliente" 
-        class="imagem-ilustrativa"
-      />
+      <img src="imgs/pexels-martabranco-32236830.jpg" alt="Farmacêutico auxiliando cliente"
+        class="imagem-ilustrativa" />
     </section>
 
     <section id="simulador" class="simulador" tabindex="0" aria-label="Simulador de adesão ao tratamento">
       <h2>Simulador</h2>
       <form id="formSimulador" onsubmit="salvarDados(event)" novalidate>
         <label for="medicamento">Nome do Medicamento:</label>
-        <input type="text" id="medicamento" name="medicamento" placeholder="Ex: Paracetamol" required aria-required="true" aria-describedby="medicamentoHelp" />
+        <input type="text" id="medicamento" name="medicamento" placeholder="Ex: Paracetamol" required
+          aria-required="true" aria-describedby="medicamentoHelp" />
         <small id="medicamentoHelp" class="form-help">Informe o nome do medicamento que você usa.</small>
 
         <label for="horario">Horário de uso:</label>
@@ -65,16 +63,19 @@
         <small id="horarioHelp" class="form-help">Selecione o horário do medicamento.</small>
 
         <label for="receita">Anexar Receita (simulado):</label>
-        <input type="file" id="receita" name="receita" accept="image/*,application/pdf" onchange="previewArquivo()" aria-describedby="receitaHelp" />
+        <input type="file" id="receita" name="receita" accept="image/*,application/pdf" onchange="previewArquivo()"
+          aria-describedby="receitaHelp" />
         <small id="receitaHelp" class="form-help">Pode anexar imagem ou PDF da receita médica.</small>
 
         <div id="previewContainer" aria-live="polite" aria-atomic="true">
-          <img id="previewImagem" alt="Pré-visualização da imagem da receita" style="max-width: 100%; margin-top: 10px; display: none;" />
+          <img id="previewImagem" alt="Pré-visualização da imagem da receita"
+            style="max-width: 100%; margin-top: 10px; display: none;" />
           <p id="previewNomeArquivo" style="margin-top: 10px; font-style: italic;"></p>
         </div>
 
         <label for="duvidas">Dúvidas Frequentes:</label>
-        <textarea id="duvidas" name="duvidas" rows="4" placeholder="Escreva suas dúvidas aqui..." aria-describedby="duvidasHelp"></textarea>
+        <textarea id="duvidas" name="duvidas" rows="4" placeholder="Escreva suas dúvidas aqui..."
+          aria-describedby="duvidasHelp"></textarea>
         <small id="duvidasHelp" class="form-help">Você pode escrever suas dúvidas para o farmacêutico.</small>
 
         <div class="botoes-form">
@@ -86,24 +87,33 @@
 
       <div id="dadosSalvos" aria-live="polite" aria-atomic="true"></div>
     </section>
-
+    <div>
+      <p style="text-align: center;">Chat com o farmacêutico
+        Solicite o atendimento com profissionais farmacêutico em tempo real.</p>
+    </div>
+    <div class="form-farmaceutico">
+      <input type="search" name="Farmaceutico" id="buscarFarmaceutico" placeholder="Pesquise por um farmacêutico...">
+      <input id="button-pesquisar" type="submit" value="Pesquisar">
+    </div>
     <section id="faq" tabindex="0" aria-label="Dúvidas frequentes">
       <h2>Dúvidas Frequentes</h2>
       <dl>
         <dt>Como posso lembrar dos horários dos meus remédios?</dt>
-        <dd>O FarmaGuia oferece lembretes para os horários cadastrados, ajudando a manter sua rotina correta.</dd>
+        <dd>A FarmaSync oferece lembretes para os horários cadastrados, ajudando a manter sua rotina correta.</dd>
 
         <dt>Como faço para anexar uma receita?</dt>
         <dd>No simulador, você pode anexar imagens ou PDFs para simular a anexação de receitas.</dd>
 
         <dt>Posso conversar com um farmacêutico?</dt>
-        <dd>Sim, em versões futuras haverá um canal de comunicação para tirar dúvidas diretamente com profissionais.</dd>
+        <dd>Sim, em versões futuras haverá um canal de comunicação para tirar dúvidas diretamente com profissionais.
+        </dd>
       </dl>
     </section>
 
     <section id="equipe" tabindex="0" aria-label="Equipe do projeto">
       <h2>Equipe</h2>
-      <p>Andressa Daynny Azevedo Souza, Emanueli da Silva de Araújo, Hellen Beatriz Monteiro Costa, Isabela Mascarenhas Mendes, Maria Vitoria Pereira Melo, Pattrick Ferreira de Jesus, Sannyel Costa Silva.</p>
+      <p>Andressa Daynny Azevedo Souza, Emanueli da Silva de Araújo, Hellen Beatriz Monteiro Costa, Isabela Mascarenhas
+        Mendes, Maria Vitoria Pereira Melo, Pattrick Ferreira de Jesus, Sannyel Costa Silva.</p>
       <p>Orientador: Prof. Saulo José Figueiredo Mendes</p>
     </section>
   </main>
@@ -115,4 +125,5 @@
   <!-- JS -->
   <script src="script.js"></script>
 </body>
+
 </html>

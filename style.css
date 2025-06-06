@@ -16,7 +16,7 @@ body {
 
 /* Cabeçalho fixo e estilizado */
 header {
-  background-color: #70e0a3;
+  background-color: #C41D24;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -26,6 +26,7 @@ header {
   top: 0;
   z-index: 1000;
   flex-wrap: wrap;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.68);
 }
 
 header #logo{
@@ -118,12 +119,12 @@ ul {
 
 .simulador input:focus,
 .simulador textarea:focus {
-  border-color: #70e0a3;
+  border-color: #C41D24;
   outline: none;
 }
 
 .simulador button {
-  background-color: #70e0a3;
+  background-color: #C41D24;
   color: white;
   border: none;
   cursor: pointer;
@@ -166,6 +167,36 @@ ul {
   margin-bottom: 0.8rem;
   display: block;
 }
+.form-farmaceutico{
+  display: flex;
+  justify-content: space-around;
+}
+#buscarFarmaceutico{
+  margin: 0px 5px;
+  width: 90%;
+  height: 50px;
+  background-color: none;
+  outline: none;
+  border-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.228);
+}
+#button-pesquisar{
+  cursor: pointer;
+  margin: 0px 5px;
+  width: 10%;
+  height: 50px;
+  background-color: none;
+  outline: none;
+  border-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  color: rgb(181, 17, 2);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.228);
+}
 
 /* Dúvidas frequentes (FAQ) */
 dl dt {
@@ -181,7 +212,7 @@ dl dd {
 
 /* Footer */
 footer {
-  background-color: #70e0a3;
+  background-color: #C41D24;
   color: white;
   text-align: center;
   padding: 1rem 1rem;
@@ -195,6 +226,15 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
+  #buscarFarmaceutico{
+    width: 75%;
+  }
+  #button-pesquisar{
+    width: 25%;
+    padding: 10px;
+    margin: 0px;
+    align-items: center;
+  }
   header #logo{
     border-radius: 70px;
     height: 50px;
@@ -203,7 +243,7 @@ footer {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #70e0a3;
+    background-color: #C41D24;
     padding: 1rem 0;
   }
   
